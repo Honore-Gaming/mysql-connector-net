@@ -107,11 +107,7 @@ namespace MySql.Data.Common
       IPAddress addr = ipAddresses.FirstOrDefault(c => c.AddressFamily == AddressFamily.InterNetwork) ?? ipAddresses[0];
       TcpClient tcpClient = new TcpClient(addr.AddressFamily);
 
-      if (execAsync)
-        using (cancellationToken.Register(() => throw new MySqlException(Resources.Timeout, new TimeoutException())))
-          await tcpClient.ConnectAsync(settings.Server, (int)settings.Port).ConfigureAwait(false);
-      else
-        if (!tcpClient.ConnectAsync(settings.Server, (int)settings.Port).Wait((int)settings.ConnectionTimeout * 1000))
+      if (!tcpClient.ConnectAsync(settings.Server, (int)settings.Port).Wait((int)settings.ConnectionTimeout * 1000))
         throw new MySqlException(Resources.Timeout, new TimeoutException());
 
       if (settings.Keepalive > 0)
