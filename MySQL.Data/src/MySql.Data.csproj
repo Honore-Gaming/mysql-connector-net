@@ -2,14 +2,19 @@
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
 
   <PropertyGroup>
+    <!-- REMOVED BY Honoré Gaming -->
+    <!--
     <Description>MySql.Data.MySqlClient .Net Core Class Library</Description>
     <Copyright>Copyright © 2016, 2024, Oracle and/or its affiliates.</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <!-- REMOVED BY Honoré Gaming -->
-    <!-- <Version>9.1.0</Version> -->
-    <Authors>Oracle</Authors>
+    <Version>9.1.0</Version>
+    -->
+    <!-- MODIFIED BY Honoré Gaming -->
+    <Authors>Honoré Gaming</Authors>
     <AssemblyName>MySql.Data</AssemblyName>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0;</TargetFrameworks>
+    <!-- REMOVED BY Honoré Gaming -->
+    <!--
     <PackageId>MySql.Data</PackageId>
     <PackageTags>MySql;.NET Connector;MySql Connector/NET;netcore;.Net Core;MySql Conector/Net Core;coreclr;C/NET;C/Net Core</PackageTags>
     <PackageReleaseNotes>Review ReleaseNotes.txt for details.</PackageReleaseNotes>
@@ -18,6 +23,7 @@
     <PackageProjectUrl>https://dev.mysql.com/downloads/</PackageProjectUrl>
     <PackageLicenseExpression>GPL-2.0-only WITH Universal-FOSS-exception-1.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    -->
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -28,9 +34,12 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+    <!-- REMOVED BY Honoré Gaming -->
+    <!--
     <SignAssembly>True</SignAssembly>
     <DelaySign>True</DelaySign>
     <AssemblyOriginatorKeyFile>..\..\ConnectorNetPublicKey.snk</AssemblyOriginatorKeyFile>
+    -->
     <NoWarn>CS1591,CS1587,CS1574,CS1570,SYSLIB0003,CA1416,CS8981</NoWarn>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -46,7 +55,9 @@
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
     <TargetFrameworks>net462;net48;$(TargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
-  
+
+  <!-- REMOVED BY Honoré Gaming -->
+  <!--
   <ItemGroup>
     <None Include="..\..\Nuget\Images\logo-mysql-170x115.png" Pack="true" PackagePath="\" />
   </ItemGroup>
@@ -59,6 +70,7 @@
     <None Include="..\..\README" Pack="true" PackagePath="\" />
     <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
   </ItemGroup>
+  -->
 
   <ItemGroup>
     <EmbeddedResource Include="Properties\ReservedWords.txt" />
